@@ -1,9 +1,14 @@
 package org.vladyka.handler;
 
 import org.telegram.telegrambots.meta.api.objects.Update;
+import org.vladyka.helper.KeyboardHelper;
 import org.vladyka.model.UserRequest;
+import org.vladyka.service.TelegramService;
 
 public abstract class UserRequestHandler {
+
+    protected KeyboardHelper keyboardHelper;
+    protected TelegramService telegramService;
 
     public abstract boolean isApplicable(UserRequest request);
     public abstract void handle(UserRequest dispatchRequest);

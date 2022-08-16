@@ -10,7 +10,7 @@ import org.telegram.telegrambots.bots.DefaultBotOptions;
 @Component
 public class VolunteerHelpBotSender extends DefaultAbsSender {
 
-    @Value("${bot.token}")
+    @Value("5448307392:AAHzcfZWM1E56tpUqR4ustFcQ1rpZcD19eE")
     private String botToken;
 
     protected VolunteerHelpBotSender() {

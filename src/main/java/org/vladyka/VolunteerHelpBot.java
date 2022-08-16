@@ -15,10 +15,10 @@ import org.vladyka.service.UserSessionService;
 @Component
 public class VolunteerHelpBot extends TelegramLongPollingBot {
 
-    @Value("${bot.token}")
+    @Value("5448307392:AAHzcfZWM1E56tpUqR4ustFcQ1rpZcD19eE")
     private String botToken;
 
-    @Value("${bot.username}")
+    @Value("niegazowany_bot")
     private String botUsername;
 
     private final Dispatcher dispatcher;
@@ -56,7 +56,7 @@ public class VolunteerHelpBot extends TelegramLongPollingBot {
             boolean dispatched = dispatcher.dispatch(userRequest);
 
             if (!dispatched) {
-                log.warn("Unexpected update from user");
+                log.warn("Ooops...unexpected");
             }
         } else {
             log.warn("Unexpected update from user");
@@ -76,4 +76,5 @@ public class VolunteerHelpBot extends TelegramLongPollingBot {
         // always provide it externally(for example as environmental variable)
         return botToken;
     }
+
 }
